@@ -107,7 +107,7 @@ tasks.register("release") {
         
         println("Creating tag v$newVersion...")
         try { git("tag", "-d", "v$newVersion") } catch (e: Exception) {}
-        git("tag", "-a", "v$newVersion", "-m", "Релиз версии $newVersion")
+        git("tag", "-a", "v$newVersion", "-m", "Update $newVersion")
         
         println("Push")
         val branch = git("branch", "--show-current")
